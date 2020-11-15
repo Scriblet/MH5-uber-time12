@@ -1,12 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import webCam from './js/cam.js';
+import { webCam, videoPromise } from './js/cam.js';
 import qrCode from '../img/QR_Code_Icon.svg';
 
 class QrCode extends React.Component {
-  componentDidMount() {
-    webCam();
+  constructor(props) {
+    super(props);
+    this.state = {
+      isfecth: false,
+    }
+    this.handleChangeIsFecth = this.handleChangeIsFecth.bind(this);
   }
+  handleChangeIsFecth() {
+    this.setState({
+      isfecth: true,
+    })
+  }
+  componentDidMount() {
+    webCam(this.handleChangeIsFecth);
+  }
+  // componentDidUpdate() {
+  //   webCam();
+  // }
   render() {
     return(
       <div className="read-qr">
@@ -14,7 +29,8 @@ class QrCode extends React.Component {
             <h1 className="text-title-qr">Aproxime seu QR Code no leitor</h1>
           </div>
           <div>
-            { stream.active ? <video autoplay="true" id="webCam" /> : <img src={qrCode} autoplay="true" id="webCam" alt="qr Code" />}
+            { this.state.isfecth ? <video id="webCam" autoPlay="true" /> : <img src={qrCode} autoPlay="false" id="webCam" alt="qr Code" /> }
+            { console.log(videoPromise.active) }
             <div className="cancel-qr">
               <Link to="/" >
                 <p className="btn-cancel-qr">Cancelar</p>

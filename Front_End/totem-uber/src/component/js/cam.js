@@ -1,6 +1,7 @@
-function WebCam(){
+let videoPromise = {};
+function webCam(funcHandle){
 	//Captura elemento de vídeo
-	var video = document.querySelector("#webCam");
+	const video = document.querySelector("#webCam");
 		//As opções abaixo são necessárias para o funcionamento correto no iOS
 		video.setAttribute('autoplay', '');
 	    video.setAttribute('muted', '');
@@ -9,15 +10,18 @@ function WebCam(){
 	
 	//Verifica se o navegador pode capturar mídia
 	if (navigator.mediaDevices.getUserMedia) {
-		const videoPromise = navigator.mediaDevices.getUserMedia({audio: false, video: {facingMode: 'user'}});
-		videoPromise.then( function(stream) {
+		navigator.mediaDevices.getUserMedia({audio: false, video: {facingMode: 'user'}})
+		.then( function(stream) {
 			//Definir o elemento vídeo a carregar o capturado pela webcam
 			video.srcObject = stream;
+			videoPromise = stream;
+			funcHandle();
+			// process.exit();
 		})
 		.catch(function(error) {
-			alert("Oooopps... Falhou :'(");
+			console.log(error);
 		});
 	}
 }
 
-export default WebCam;
+export { webCam, videoPromise };
