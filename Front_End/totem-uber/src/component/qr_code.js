@@ -14,7 +14,9 @@ class QrCode extends React.Component {
           <div>
             <video autoplay="true" id="webCam">
             </video>
-          <button></button>
+            <div className="cancel-qr">
+              <button className="btn-cancel-qr">Cancelar</button>
+            </div>
           </div>
         </div>
       );

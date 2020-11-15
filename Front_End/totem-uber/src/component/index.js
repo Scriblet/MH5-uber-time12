@@ -1,17 +1,12 @@
 import { Link } from 'react-router-dom';
 import girlQr from '../img/Mulher_Celular.svg';
 
-const text = `
-  solicite\n
-  seu UBER\n
-  Aqui!!
-`;
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <div className="text-header">
-          <h1 className="text-title">{text}</h1>
+          <h1 className="text-title">Solicite<br />seu UBER<br />Aqui!!</h1>
         </div>
         <div className="App-body">
           <img className="img-body" src={girlQr} alt="girl QR code"></img>
