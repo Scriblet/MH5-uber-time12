@@ -9,8 +9,8 @@ function WebCam(){
 	
 	//Verifica se o navegador pode capturar mídia
 	if (navigator.mediaDevices.getUserMedia) {
-		navigator.mediaDevices.getUserMedia({audio: false, video: {facingMode: 'user'}})
-		.then( function(stream) {
+		const videoPromise = navigator.mediaDevices.getUserMedia({audio: false, video: {facingMode: 'user'}});
+		videoPromise.then( function(stream) {
 			//Definir o elemento vídeo a carregar o capturado pela webcam
 			video.srcObject = stream;
 		})

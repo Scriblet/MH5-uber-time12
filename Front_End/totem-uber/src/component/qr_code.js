@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import webCam from './js/cam.js';
+import qrCode from '../img/QR_Code_Icon.svg';
 
 class QrCode extends React.Component {
   componentDidMount() {
@@ -12,10 +14,11 @@ class QrCode extends React.Component {
             <h1 className="text-title-qr">Aproxime seu QR Code no leitor</h1>
           </div>
           <div>
-            <video autoplay="true" id="webCam">
-            </video>
+            { stream.active ? <video autoplay="true" id="webCam" /> : <img src={qrCode} autoplay="true" id="webCam" alt="qr Code" />}
             <div className="cancel-qr">
-              <button className="btn-cancel-qr">Cancelar</button>
+              <Link to="/" >
+                <p className="btn-cancel-qr">Cancelar</p>
+              </Link>
             </div>
           </div>
         </div>
