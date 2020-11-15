@@ -9,14 +9,57 @@ body {
 }
 
 .text-title {
-  margin: 102px 0 0 130px;
+  height: 50%;
+  margin: 129px 0 0 130px;
   font-size: 120px;
   color: white;
   width: 547px;
 }
 
 .App-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 1080px;
   height: 1640px;
   background-color: white;
+}
+
+.App-body {
+  display: flex;
+  height: 50%;
+
+}
+
+.text-btn-body {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 616.23px;
+  height: 410px;
+  left: 402px;
+  top: 996px;
+}
+
+.img-body {
+  align-self: flex-end;
+}
+
+.text-body {
+  text-align: right;
+  font-size: 72px;
+}
+
+.btn_solicite {
+    color: white;
+    align-self: flex-end;
+    width: 369.23px;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+    background-color: black;
+    font: 400 13.3333px Arial;
+    font-size: 22px;
+    border: none;
 }
