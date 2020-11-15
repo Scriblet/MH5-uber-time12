@@ -1,5 +1,7 @@
 body {
   background-color: blue;
+  width: 1080px;
+  height: 1640px;
 }
 .text-header {
   background-image: url(./img/Group_5.png);
@@ -16,6 +18,29 @@ body {
   width: 547px;
 }
 
+.text-title-qr {
+  color: black;
+  font-size: 106px;
+  margin: 0;
+}
+
+.read-qr {
+  width: 1080px;
+  height: 1640px;
+  background-color: white;
+}
+
+#webCam {
+  height: 810px;
+}
+
+.cancel-qr {
+  width: 1081.05px;
+  height: 1030px;
+  bottom: 0;
+  background-color: yellow;
+}
+
 .App-header {
   display: flex;
   flex-direction: column;
@@ -28,7 +53,6 @@ body {
 .App-body {
   display: flex;
   height: 50%;
-
 }
 
 .text-btn-body {
@@ -49,6 +73,19 @@ body {
 .text-body {
   text-align: right;
   font-size: 72px;
+}
+
+.btn_solicite {
+  color: white;
+  align-self: flex-end;
+  width: 369.23px;
+  height: 80px;
+  text-align: center;
+  cursor: pointer;
+  background-color: black;
+  font: 400 13.3333px Arial;
+  font-size: 22px;
+  border: none;
 }
 
 .btn_solicite {
