@@ -4,12 +4,19 @@ body {
 .text-header {
   background-image: url(./img/Group_5.png);
   background-repeat: no-repeat;
-  background-size: 727px;
+  background-size: 1080px;
   height: 50%;
 }
 
+.text-title {
+  margin: 102px 0 0 130px;
+  font-size: 120px;
+  color: white;
+  width: 547px;
+}
+
 .App-header {
-  width: 727px;
-  height: 1104px;
+  width: 1080px;
+  height: 1640px;
   background-color: white;
 }
