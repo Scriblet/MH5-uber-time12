@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="text-header">
-          <p>{text}</p>
+          <h1 className="text-title">{text}</h1>
         </div>
         <div>
           <img src={girlQr} alt="girl QR code"></img>
