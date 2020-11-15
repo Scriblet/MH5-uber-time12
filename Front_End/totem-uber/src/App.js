@@ -3,6 +3,11 @@ import './App.css';
 import Initial from './component';
 import QrCode from './component/qr_code';
 
+const text = `
+  solicite\n
+  seu UBER\n
+  Aqui!!
+`;
 function App() {
   return (
     <BrowserRouter>

@@ -87,3 +87,16 @@ body {
   font-size: 22px;
   border: none;
 }
+
+.btn_solicite {
+    color: white;
+    align-self: flex-end;
+    width: 369.23px;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+    background-color: black;
+    font: 400 13.3333px Arial;
+    font-size: 22px;
+    border: none;
+}
