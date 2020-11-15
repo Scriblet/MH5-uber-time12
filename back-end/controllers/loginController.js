@@ -5,8 +5,6 @@ const { loginService } = require('../services');
 const userCreation = async (req, res, next) => {
   const { name, email, password } = req.body;
 
-  console.log(name)
-
   const createdUser = await loginService.userCreation({ name, email, password });
 
   if (!createdUser) {
@@ -19,17 +17,17 @@ const userCreation = async (req, res, next) => {
 const userLogin = async (req, res, next) => {
   const { email, password } = req.body;
 
-  const login = await loginService.loginUser(email);
+  const { existentUser, token } = await loginService.loginUser(email);
 
-  if (!login) {
+  if (!existentUser.email) {
     return next(boom.badRequest('Email invalido'));
   }
 
-  if (password !== login.password) {
+  if (password !== existentUser.password) {
     return next(boom.badRequest('Senha invalida'))
   }
 
-  res.status(200).json({ message: 'Success' })
+  res.status(200).json({ token });
 };
 
 module.exports = {
