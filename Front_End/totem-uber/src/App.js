@@ -13,12 +13,9 @@ function App() {
         <div className="text-header">
           <h1 className="text-title">{text}</h1>
         </div>
-        <div className="App-body">
-          <img className="img-body" src={girlQr} alt="girl QR code"></img>
-          <div className="text-btn-body">
-            <h1 className="text-body">Viagem particular<br />a um preço<br />acessível</h1>
-            <button className="btn_solicite">Solicitar agora</button>
-          </div>
+        <div>
+          <img src={girlQr} alt="girl QR code"></img>
+        <button className="btn_solicite">Solicitar agora</button>
         </div>
       </header>
     </div>
