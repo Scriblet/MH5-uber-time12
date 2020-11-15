@@ -16,7 +16,18 @@ body {
   width: 547px;
 }
 
-.App-header {
+.text-title-qr {
+  color: black;
+  font-size: 106px;
+}
+
+.read-qr {
+  width: 1080px;
+  height: 1640px;
+  background-color: white;
+}
+
+.App-header{
   display: flex;
   flex-direction: column;
   justify-content: space-between;

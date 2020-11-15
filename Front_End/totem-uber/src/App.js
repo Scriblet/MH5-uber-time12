@@ -1,27 +1,16 @@
-import girlQr from './img/Mulher_Celular.svg';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Initial from './component';
+import QrCode from './component/qr_code';
 
-const text = `
-  solicite\n
-  seu UBER\n
-  Aqui!!
-`;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="text-header">
-          <h1 className="text-title">{text}</h1>
-        </div>
-        <div className="App-body">
-          <img className="img-body" src={girlQr} alt="girl QR code"></img>
-          <div className="text-btn-body">
-            <h1 className="text-body">Viagem particular<br />a um preço<br />acessível</h1>
-            <button className="btn_solicite">Solicitar agora</button>
-          </div>
-        </div>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+      <Route exact path="/" component={ Initial } />
+      <Route exact path="/qr_code" component={ QrCode } />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
