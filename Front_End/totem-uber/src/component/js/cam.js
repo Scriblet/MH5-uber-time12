@@ -2,7 +2,7 @@ function WebCam(){
 	//Captura elemento de vídeo
 	var video = document.querySelector("#webCam");
 		//As opções abaixo são necessárias para o funcionamento correto no iOS
-		video.setAttribute('autoplay', '');
+		video.setAttribute('autoPlay', '');
 	    video.setAttribute('muted', '');
 	    video.setAttribute('playsinline', '');
 	    //--
@@ -15,7 +15,7 @@ function WebCam(){
 			video.srcObject = stream;
 		})
 		.catch(function(error) {
-			alert("Oooopps... Falhou :'(");
+			return false;
 		});
 	}
 }
