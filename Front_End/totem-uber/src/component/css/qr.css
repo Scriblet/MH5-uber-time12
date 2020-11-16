@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face{
+  font-family: uberfont;
+  src: url('../../fonts/UberMoveBold.otf');
+}
+
+.header-qr{
+  width: 1080px;
+  background-color: #0B0B0B;
+  height: 500px;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.text-title-qr {
+  font-family: uberfont;
+  color: aliceblue;
+  font-size: 106px;
+  text-align: center;
+}
+
+#webCam {
+  height: 810px;
+}
+
+
+.cancel-qr {
+  text-align: center;
+  width: 100%;
+  padding-top: 5%;
+}
+
+.btn-cancel-qr{
+  border-image-source: linear-gradient(to right, white , #276ef1, white);
+  border-image-slice: 1 0 0 0;
+  width: 75%;
+  border-width: 3px;
+  background-color: white;
+  text-decoration: underline;
+  font-size: 50px;
+}

@@ -1,5 +1,5 @@
 body {
-  background-color: blue;
+  background-color: #ffffff;
   width: 1080px;
   height: 1640px;
 }
@@ -18,28 +18,28 @@ body {
   width: 547px;
 }
 
-.text-title-qr {
+/* .text-title-qr {
   color: black;
   font-size: 106px;
   margin: 0;
-}
+} */
 
-.read-qr {
+/* .read-qr {
   width: 1080px;
   height: 1640px;
   background-color: white;
-}
+} */
 
-#webCam {
+/* #webCam {
   height: 810px;
-}
+} */
 
-.cancel-qr {
+/* .cancel-qr {
   width: 1081.05px;
   height: 1030px;
   bottom: 0;
   background-color: yellow;
-}
+} */
 
 .App-header {
   display: flex;
