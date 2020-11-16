@@ -12,7 +12,7 @@ class QrCode extends React.Component {
             <h1 className="text-title-qr">Aproxime seu QR Code no leitor</h1>
           </div>
           <div>
-            <video autoplay="true" id="webCam">
+            <video autoPlay={true} id="webCam">
             </video>
             <div className="cancel-qr">
               <button className="btn-cancel-qr">Cancelar</button>

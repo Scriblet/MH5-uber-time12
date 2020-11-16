@@ -100,3 +100,38 @@ body {
     font-size: 22px;
     border: none;
 }
+
+.body-pack {
+  width: 1080px;
+  height: 1640px;
+}
+
+.nav-pack {
+  width: 1080px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+}
+
+.title-pack, .name-user, p {
+  color: white;
+}
+.title-pack {
+  align-self: flex-end;
+  font-size: 36px;
+}
+
+.info-perfil {
+  display: flex;
+  flex-direction: row;
+}
+
+.plans {
+  background-image: url(./img/Group_30.png);
+  height: 1434px;
+}
+
+.icon-back {
+  padding-right: 100px;
+}
